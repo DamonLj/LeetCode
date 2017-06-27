@@ -16,14 +16,12 @@ import time
 
 class Solution:
     # @return a tuple, (index1, index2)
-    def twoSum(self, num, target):
-        dict = {}
-        for i in range(len(num)):
-            x = num[i]
-            if target-x in dict:
-                return dict[target-x], i
-            dict[x] = i
-
+    def twoSum(self, nums, target):
+        dic = {}
+        for i in range(len(nums)):
+            if target - nums[i] in dic:
+                return i, dic[target - nums[i]]
+            dic[nums[i]] = i
 
 if __name__ == '__main__':
     nums = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58,
